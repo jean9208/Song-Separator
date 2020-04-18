@@ -12,9 +12,9 @@ library(tuneR)
 library(fastICA)
 library(seewave)
 
-#Load song
+#load song
 
-song <- readMP3("demo.mp3")
+song <- readmp3("demo.mp3")
 
 
 #Start with a small subset of the song
@@ -30,7 +30,7 @@ result <- fastICA(test,2)
 
 output <- Wave(result$S, bit = 16)
 
-#Save .wav 
+#Save .wav
 savewav(output, filename = "output.wav")
 
 
